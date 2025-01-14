@@ -5,6 +5,7 @@ import '../../../utiles/images.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
+
   static String routeName = "splash";
 
   @override
