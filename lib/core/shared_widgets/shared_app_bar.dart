@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:now_news/core/shared_widgets/shared_icon_button.dart';
-import 'package:now_news/features/search_feature/presentation/search_screen.dart';
+import 'package:now_news/features/search_feature/presentation/search_delegate.dart';
 
 import '../utiles/app_colors.dart';
 import 'custom_text.dart';
@@ -11,6 +11,7 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      toolbarHeight: 80,
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(50),
@@ -20,9 +21,7 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       actions: [
         SharedIconButton(
-          icon: Icons.menu,
-          color: AppColors.secondary,
-        ),
+            icon: Icons.menu, color: AppColors.secondary, onPressed: () {}),
         const SizedBox(
           width: 70,
         ),
@@ -45,5 +44,5 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => Size.fromHeight(80);
 }

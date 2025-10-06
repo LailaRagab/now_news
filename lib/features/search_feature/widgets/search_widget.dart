@@ -5,7 +5,7 @@ import 'package:now_news/features/search_feature/presentation/widgets/search_wid
 import '../../../api/news_services.dart';
 import '../../../core/utiles/app_colors.dart';
 import '../../../core/utiles/app_images.dart';
-import '../../home_feature/home_models/article.dart';
+import '../../home_feature/models/article.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key, required this.search});

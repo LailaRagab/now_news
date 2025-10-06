@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home_feature/home_models/article.dart';
+import '../../../../home_feature/models/article.dart';
 
 class ArticleItem extends StatelessWidget {
   const ArticleItem({super.key, required this.article});

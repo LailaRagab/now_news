@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../home_feature/home_models/article.dart';
+import '../../../home_feature/models/article.dart';
 
 class News extends StatelessWidget {
   const News({super.key, required this.generalNews});

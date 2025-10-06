@@ -1,27 +1,41 @@
 import 'package:flutter/material.dart';
-
-import '../../home_models/categories_model.dart';
+import 'package:now_news/core/shared_widgets/custom_text.dart';
+import 'package:now_news/core/utiles/app_colors.dart';
+import 'package:now_news/core/utiles/app_styles.dart';
 import 'category_articles.dart';
 
-class CategoryCards extends StatelessWidget {
-  const CategoryCards({super.key, required this.model});
-
-  final HorizontalCategoriesModel model;
-
+class CategoryCard extends StatelessWidget {
+  const CategoryCard({
+    super.key,
+    required this.color,
+    required this.image,
+    required this.text,
+    required this.bottomLeft,
+    required this.bottomRight,
+  });
+  final Color color;
+  final String image;
+  final String text;
+  final double bottomLeft;
+  final double bottomRight;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return DisplayCategoryNews(category: model.name);
+          return DisplayCategoryNews(category: text);
         }));
       },
       child: Container(
         decoration: BoxDecoration(
-          color: model.bgColor,
-          borderRadius: BorderRadius.circular(15),
+          color: color,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25),
+              bottomLeft: Radius.circular(bottomLeft),
+              topRight: Radius.circular(25),
+              bottomRight: Radius.circular(bottomRight)),
           image: DecorationImage(
-            image: AssetImage(model.bgImage),
+            image: AssetImage(image),
           ),
         ),
         width: 148,
@@ -31,16 +45,12 @@ class CategoryCards extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 5),
-                child: Text(
-                  model.name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: CustomText(
+                      text: text,
+                      style: AppStyles.font22black.copyWith(
+                          color: AppColors.secondary,
+                          fontWeight: FontWeight.w400))),
             ),
           ],
         ),

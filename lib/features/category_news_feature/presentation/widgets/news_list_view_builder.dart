@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import '../../../../api/news_services.dart';
-import '../../../home_feature/home_models/article.dart';
+import '../../../home_feature/models/article.dart';
 import 'news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {

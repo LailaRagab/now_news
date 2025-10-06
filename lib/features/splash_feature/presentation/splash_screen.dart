@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/features/home_feature/presentation/home_screen.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/utiles/app_images.dart';
 
@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, HomeScreen.routeName);
+      GoRouter.of(context).go("/models");
     });
     return Scaffold(
       body: Image.asset(AppImages.splash),

@@ -1,7 +1,7 @@
 // class for API request.
 import 'package:dio/dio.dart';
 
-import '../features/home_feature/home_models/article.dart';
+import '../features/home_feature/models/article.dart';
 
 class NewsServices {
   final Dio dio;
