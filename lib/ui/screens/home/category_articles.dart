@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../ui/widgets/app_bar/app_bar.dart';
-import '../../../category_news_feature/presentation/widgets/news_list_view_builder.dart';
+import 'package:now_news/ui/widgets/app_bar/app_bar.dart';
+
+import '../../widgets/news_vertical_widgets/news_list_view_builder.dart';
 
 class DisplayCategoryNews extends StatelessWidget {
   const DisplayCategoryNews({super.key, required this.category});

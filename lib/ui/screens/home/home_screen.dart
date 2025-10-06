@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/features/home_feature/presentation/widgets/categories_listview.dart';
 
-import '../../../ui/widgets/app_bar/app_bar.dart';
+import '../../widgets/app_bar/app_bar.dart';
+import '../../widgets/categories_widgets/categories_listview.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:now_news/features/search_feature/presentation/widgets/search_widget/article_item.dart';
+import 'package:now_news/ui/widgets/search_widget/article_item.dart';
+import 'package:now_news/utiles/colors.dart';
 
 import '../../../api/news_services.dart';
-import '../../../utiles/colors.dart';
+import '../../../models/article.dart';
 import '../../../utiles/images.dart';
-import '../../home_feature/home_models/article.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key, required this.search});

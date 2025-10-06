@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/features/home_feature/presentation/home_screen.dart';
+import 'package:now_news/ui/screens/home/home_screen.dart';
 
 import '../../../utiles/images.dart';
 

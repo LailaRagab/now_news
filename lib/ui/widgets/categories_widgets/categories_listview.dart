@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../../utiles/colors.dart';
-import '../../../../utiles/images.dart';
-import '../../home_models/categories_model.dart';
+import 'package:now_news/utiles/colors.dart';
+
+import '../../../models/categories_model.dart';
+import '../../../utiles/images.dart';
 import 'category_card.dart';
 
 class CategoriesListview extends StatelessWidget {
