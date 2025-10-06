@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../utiles/colors.dart';
-import '../../../../utiles/images.dart';
+import '../../../../core/utiles/app_colors.dart';
+import '../../../../core/utiles/app_images.dart';
 import '../../home_models/categories_model.dart';
 import 'category_card.dart';
 
@@ -9,23 +9,25 @@ class CategoriesListview extends StatelessWidget {
 
   final List<HorizontalCategoriesModel> categoriesList = [
     HorizontalCategoriesModel(
-        bgImage: Images.business,
+        bgImage: AppImages.business,
         name: "Business",
         bgColor: AppColors.businessColor),
     HorizontalCategoriesModel(
-        bgImage: Images.technology,
+        bgImage: AppImages.technology,
         name: "Technology",
         bgColor: AppColors.politicsColor), //
     HorizontalCategoriesModel(
-        bgImage: Images.ball, name: "Sports", bgColor: AppColors.ballColor),
+        bgImage: AppImages.ball, name: "Sports", bgColor: AppColors.ballColor),
     HorizontalCategoriesModel(
-        bgImage: Images.health, name: "Health", bgColor: AppColors.healthColor),
+        bgImage: AppImages.health,
+        name: "Health",
+        bgColor: AppColors.healthColor),
     HorizontalCategoriesModel(
-        bgImage: Images.entertainment,
+        bgImage: AppImages.entertainment,
         name: "Entertainment",
         bgColor: AppColors.environmentColor), //
     HorizontalCategoriesModel(
-        bgImage: Images.science,
+        bgImage: AppImages.science,
         name: "Science",
         bgColor: AppColors.scienceColor),
   ];

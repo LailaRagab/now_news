@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/features/search_feature/presentation/search_widget.dart';
+import 'package:now_news/features/search_feature/widgets/search_widget.dart';
 
-import '../../../utiles/colors.dart';
+import '../../../core/utiles/app_colors.dart';
 
 class SearchScreen extends SearchDelegate {
   @override

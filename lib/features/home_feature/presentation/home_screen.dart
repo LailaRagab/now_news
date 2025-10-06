@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:now_news/core/shared_widgets/shared_app_bar.dart';
 import 'package:now_news/features/home_feature/presentation/widgets/categories_listview.dart';
-
-import '../../../ui/widgets/app_bar/app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
+      appBar: SharedAppBar(),
       body: CategoriesListview(),
     );
   }

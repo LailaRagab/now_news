@@ -1,5 +1,5 @@
 class AppImages {
-  static String basic = 'lib/assets/images';
+  static String basic = 'assets/images';
   static String splash = '$basic/splashh.png';
   static String background = '$basic/background.png';
   static String ball = '$basic/ball.png';

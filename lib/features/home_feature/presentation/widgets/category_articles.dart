@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../ui/widgets/app_bar/app_bar.dart';
+import '../../../../core/shared_widgets/shared_app_bar.dart';
 import '../../../category_news_feature/presentation/widgets/news_list_view_builder.dart';
 
 class DisplayCategoryNews extends StatelessWidget {
@@ -10,7 +10,7 @@ class DisplayCategoryNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
+      appBar: SharedAppBar(),
       body: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(

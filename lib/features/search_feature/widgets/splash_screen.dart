@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:now_news/features/home_feature/presentation/home_screen.dart';
 
-import '../../../utiles/images.dart';
+import '../../../core/utiles/app_images.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.pushNamed(context, HomeScreen.routeName);
     });
     return Scaffold(
-      body: Image.asset(Images.splash),
+      body: Image.asset(AppImages.splash),
     );
   }
 }

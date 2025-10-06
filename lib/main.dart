@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/ui/screens/home/home_screen.dart';
-import 'package:now_news/ui/screens/splash/splash_screen.dart';
-import 'package:now_news/utiles/colors.dart';
-import 'package:now_news/utiles/images.dart';
+
+import 'core/utiles/app_colors.dart';
+import 'core/utiles/app_images.dart';
+import 'features/home_feature/presentation/home_screen.dart';
+import 'features/search_feature/widgets/splash_screen.dart';
 
 void main() {
   runApp(const NowNews());
@@ -19,7 +20,7 @@ class NowNews extends StatelessWidget {
         return Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(Images.background),
+              image: AssetImage(AppImages.background),
               fit: BoxFit.cover,
             ),
           ),
