@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
-import '../../../home_feature/models/article.dart';
+import '../../models/article_model.dart';
 
 class News extends StatelessWidget {
   const News({super.key, required this.generalNews});
 
-  final Article generalNews;
+  final ArticleModel generalNews;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(5),
           child: Image.network(
             generalNews.image ??
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVOiiseRib5RMnu-d8hONYJdDtIIhpduzWA&s",
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
             width: double.infinity,
           ),
+        ),
+        const SizedBox(
+          height: 10,
         ),
         Text(
           generalNews.title,
@@ -30,6 +33,9 @@ class News extends StatelessWidget {
               fontSize: 14,
               overflow: TextOverflow.ellipsis,
               color: Colors.grey),
+        ),
+        const SizedBox(
+          height: 5,
         )
       ],
     );

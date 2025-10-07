@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:now_news/core/helpers/app_router.dart';
 
+import 'core/constants/app_router.dart';
 import 'core/utiles/app_colors.dart';
 import 'core/utiles/app_images.dart';
 

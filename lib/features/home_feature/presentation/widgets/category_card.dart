@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:now_news/core/shared_widgets/custom_text.dart';
 import 'package:now_news/core/utiles/app_colors.dart';
 import 'package:now_news/core/utiles/app_styles.dart';
-import 'category_articles.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
@@ -22,9 +22,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return DisplayCategoryNews(category: text);
-        }));
+        GoRouter.of(context).go("/displayCategoryNews", extra: text);
       },
       child: Container(
         decoration: BoxDecoration(

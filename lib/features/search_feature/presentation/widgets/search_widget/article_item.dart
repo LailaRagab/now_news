@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home_feature/models/article.dart';
+import '../../../../category_news_feature/models/article_model.dart';
 
 class ArticleItem extends StatelessWidget {
   const ArticleItem({super.key, required this.article});
 
-  final Article article;
+  final ArticleModel article;
 
   @override
   Widget build(BuildContext context) {

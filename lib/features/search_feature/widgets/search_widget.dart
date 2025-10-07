@@ -1,11 +1,9 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:now_news/features/search_feature/presentation/widgets/search_widget/article_item.dart';
-
-import '../../../api/news_services.dart';
+import 'package:now_news/features/category_news_feature/view_model/api_services/request_searched_news.dart';
 import '../../../core/utiles/app_colors.dart';
 import '../../../core/utiles/app_images.dart';
-import '../../home_feature/models/article.dart';
+import '../../category_news_feature/models/article_model.dart';
+import '../presentation/widgets/search_widget/article_item.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key, required this.search});
@@ -23,7 +21,7 @@ class _SearchWidgetState extends State<SearchWidget> {
   void initState() {
     super.initState();
     future =
-        NewsServices(dio: Dio()).getSearchedNews(searchedQuery: widget.search);
+        RequestSearchedNews().getSearchedNews(searchedQuery: widget.search);
   }
 
   @override
@@ -37,12 +35,12 @@ class _SearchWidgetState extends State<SearchWidget> {
       ),
       child: Scaffold(
         backgroundColor: AppColors.transparent,
-        body: FutureBuilder<List<Article>>(
+        body: FutureBuilder<List<ArticleModel>>(
           future: future,
-          builder:
-              (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
+          builder: (BuildContext context,
+              AsyncSnapshot<List<ArticleModel>> snapshot) {
             if (snapshot.hasData) {
-              List<Article>? allArticles = snapshot.data;
+              List<ArticleModel>? allArticles = snapshot.data;
               return CustomScrollView(
                 slivers: [
                   SliverList(
