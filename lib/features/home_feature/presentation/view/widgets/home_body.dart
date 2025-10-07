@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:now_news/core/shared_widgets/custom_text.dart';
 import 'package:now_news/core/utiles/app_styles.dart';
 
-import '../../../../core/utiles/app_colors.dart';
-import '../../../../core/utiles/app_images.dart';
+import '../../../../../core/utiles/app_colors.dart';
+import '../../../../../core/utiles/app_images.dart';
 import 'category_card.dart';
 
 class HomeBody extends StatelessWidget {

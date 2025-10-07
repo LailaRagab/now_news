@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:now_news/core/shared_widgets/shared_app_bar.dart';
-import 'package:now_news/features/home_feature/presentation/widgets/home_body.dart';
+import 'package:now_news/features/home_feature/presentation/view/widgets/home_body.dart';
 
-import '../../../core/shared_widgets/custom_text.dart';
-import '../../../core/shared_widgets/shared_icon_button.dart';
-import '../../../core/utiles/app_colors.dart';
+import '../../../../core/shared_widgets/custom_text.dart';
+import '../../../../core/shared_widgets/shared_icon_button.dart';
+import '../../../../core/utiles/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

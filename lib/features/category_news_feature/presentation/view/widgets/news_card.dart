@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/article_model.dart';
+import '../../../models/article_model.dart';
 
 class NewsCard extends StatelessWidget {
   NewsCard({super.key, required this.articleModel});
