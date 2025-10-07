@@ -23,7 +23,7 @@ class ArticleItem extends StatelessWidget {
             ),
           ),
           Text(
-            article.title,
+            article.title ?? "",
             style:
                 const TextStyle(fontSize: 25, overflow: TextOverflow.ellipsis),
           ),

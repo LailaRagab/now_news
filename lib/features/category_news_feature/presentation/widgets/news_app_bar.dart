@@ -20,12 +20,12 @@ class NewsAppBar extends StatelessWidget implements PreferredSizeWidget {
           size: 30,
         ),
         const SizedBox(
-          width: 90,
+          width: 80,
         ),
         CustomText(
             text: category,
             style: TextStyle(color: AppColors.secondary, fontSize: 22)),
-        const SizedBox(width: 90),
+        const SizedBox(width: 70),
         SharedIconButton(
           icon: Icons.search_rounded,
           color: AppColors.secondary,

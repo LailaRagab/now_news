@@ -17,10 +17,13 @@ class DisplayCategoryNews extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: NewsAppBar(category: category),
-        body: CustomScrollView(
-          slivers: [
-            NewsListViewBuilder(categoryType: category),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 29.5, horizontal: 25.5),
+          child: CustomScrollView(
+            slivers: [
+              NewsListViewBuilder(categoryType: category),
+            ],
+          ),
         ),
       ),
     );

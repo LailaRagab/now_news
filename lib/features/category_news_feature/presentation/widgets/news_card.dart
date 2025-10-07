@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../models/article_model.dart';
 
-class News extends StatelessWidget {
-  const News({super.key, required this.generalNews});
+class NewsCard extends StatelessWidget {
+  NewsCard({super.key, required this.articleModel});
 
-  final ArticleModel generalNews;
+  ArticleModel articleModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class News extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image.network(
-            generalNews.image ??
+            articleModel.image ??
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVOiiseRib5RMnu-d8hONYJdDtIIhpduzWA&s",
             fit: BoxFit.cover,
             width: double.infinity,
@@ -24,11 +24,11 @@ class News extends StatelessWidget {
           height: 10,
         ),
         Text(
-          generalNews.title,
+          articleModel.title ?? "",
           style: const TextStyle(fontSize: 25, overflow: TextOverflow.ellipsis),
         ),
         Text(
-          generalNews.subTitle ?? " ",
+          articleModel.subTitle ?? " ",
           style: const TextStyle(
               fontSize: 14,
               overflow: TextOverflow.ellipsis,

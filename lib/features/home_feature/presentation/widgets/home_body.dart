@@ -32,8 +32,8 @@ class HomeBody extends StatelessWidget {
             ),
             CategoryCard(
               color: AppColors.politicsColor,
-              image: AppImages.politics,
-              text: "Politics",
+              image: AppImages.technology,
+              text: "Technology",
               bottomLeft: 0,
               bottomRight: 25,
             ),
@@ -68,8 +68,8 @@ class HomeBody extends StatelessWidget {
             children: [
               CategoryCard(
                 color: AppColors.environmentColor,
-                image: AppImages.environment,
-                text: "Environment",
+                image: AppImages.entertainment,
+                text: "Entertainment",
                 bottomLeft: 25,
                 bottomRight: 0,
               ),
